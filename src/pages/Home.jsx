@@ -22,8 +22,7 @@ function Home() {
       <div
         className="min-vh-100 "
         style={{
-          background:
-            "linear-gradient(to bottom, #ffec3eff, #b6c7daff, #d9e4f0ff, #ffffffff)",
+          background: "linear-gradient(to bottom,  #d9e4f0ff, #ffffffff)",
 
           borderTop: "1px solid #e4cd00ff",
         }}
@@ -42,8 +41,8 @@ function Home() {
               </p>
               <Link
                 to="/productos"
-                className="btn btn-primary btn-lg px-5 py-3 rounded-pill fw-semibold"
-                style={{ boxShadow: "0 8px 15px rgba(107, 220, 255, 0.4)" }}
+                className=" btn-productos btn-lg px-5 py-3 rounded-pill fw-semibold"
+                style={{ boxShadow: "0 8px 15px rgba(255, 191, 107, 0.69)" }}
               >
                 Ver Productos
               </Link>
@@ -138,7 +137,7 @@ function Home() {
               <div
                 className="card h-100 border-0 shadow-sm  text-center"
                 style={{
-                  background: "linear-gradient(135deg, #ffc400ff, #FFE600)",
+                  background: "linear-gradient(135deg, #ffc400a8, #ffe600a1)",
                 }}
               >
                 <div className="card-body p-3 p-md-4 ">
@@ -159,13 +158,13 @@ function Home() {
               <div
                 className="card h-100 border-0 shadow-sm text-center"
                 style={{
-                  background: "linear-gradient(135deg, #FFE600, #ffbb00ff)",
+                  background: "linear-gradient(135deg, #ffe600b7, #ffbb00a1)",
                 }}
               >
                 <div className="card-body p-3 p-md-4 ">
                   <div className="fs-1 mb-3 text-primary ">Envío</div>
                   <h5 className="card-title text-dark fw-bold">Envío Gratis</h5>
-                  <hr className="border border-warning border-1 opacity-25 w-50 mx-auto my-3" />
+                  <hr className="border border-primary border-1 opacity-25 w-50 mx-auto my-3" />
                   <p className="card-text text-muted small">
                     Envío gratuito en compras superiores a $50. Rápido y seguro
                   </p>
@@ -177,13 +176,13 @@ function Home() {
               <div
                 className="card h-100 border-0 shadow-sm text-center"
                 style={{
-                  background: "linear-gradient(135deg, #FFE600, #ffc400ff)",
+                  background: "linear-gradient(135deg, #ffe600b9, #ffc40081)",
                 }}
               >
                 <div className="card-body p-3 p-md-4">
                   <div className="fs-1 mb-3 text-primary">Pago</div>
                   <h5 className="card-title text-dark fw-bold">Pago Seguro</h5>
-                  <hr className="border border-success border-1 opacity-25 w-50 mx-auto my-3" />
+                  <hr className="border border-primary border-1 opacity-25 w-50 mx-auto my-3" />
                   <p className="card-text text-muted small">
                     Múltiples métodos de pago con la máxima seguridad
                     garantizada
