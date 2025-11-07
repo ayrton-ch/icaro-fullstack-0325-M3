@@ -13,7 +13,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: background 0.2s;
-  text-overflow: underline;
+  text-decoration: none;
 }
 
 .btn-explorar:hover {
