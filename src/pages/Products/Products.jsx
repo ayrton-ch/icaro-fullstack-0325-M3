@@ -1,30 +1,14 @@
 import React, { useEffect } from "react";
 import ProductList from "../../components/ProductList/ProductList";
-import useProductStore from "../../store/productStore";
-import { productAPI } from "../../services/api";
+import useProducts from "../../hooks/useProducts";
 import styles from "./Products.module.css";
 
 const Products = () => {
-  const { products, loading, error, setProducts, setLoading, setError } =
-    useProductStore();
+  const { products, loading, error, loadProducts } = useProducts();
 
   useEffect(() => {
-    const fetchProducts = async () => {
-      setLoading(true);
-      setError(null);
-
-      try {
-        const data = await productAPI.getAllProducts();
-        setProducts(data);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchProducts();
-  }, [setProducts, setLoading, setError]);
+    loadProducts();
+  }, []);
 
   return (
     <div className={styles.productsPage}>
