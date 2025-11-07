@@ -23,7 +23,7 @@ function Home() {
         className="min-vh-100 "
         style={{
           background:
-            "linear-gradient(to bottom, #FFE600, #b6c7daff, #d9e4f0ff, #ffffffff)",
+            "linear-gradient(to bottom, #ffec3eff, #b6c7daff, #d9e4f0ff, #ffffffff)",
 
           borderTop: "1px solid #e4cd00ff",
         }}
