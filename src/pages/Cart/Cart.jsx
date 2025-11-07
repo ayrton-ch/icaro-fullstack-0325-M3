@@ -14,7 +14,7 @@ const Cart = () => {
   // Si el carrito está vacío
   if (cart.length === 0) {
     return (
-      <div className="min-vh-100 d-flex align-items-center justify-content-center bg-light">
+      <div className="min-vh-100 d-flex align-items-center justify-content-center ">
         <div className="text-center">
           <div className="mb-4">
             <svg
@@ -31,7 +31,7 @@ const Cart = () => {
           <p className="text-muted mb-4">
             ¡Agrega algunos productos increíbles!
           </p>
-          <Link to="/products" className="btn btn-primary btn-lg px-4">
+          <Link to="/productos" className="btn-explorar btn-lg px-4">
             Explorar Productos
           </Link>
         </div>
@@ -40,7 +40,7 @@ const Cart = () => {
   }
 
   return (
-    <div className="min-vh-100 bg-light py-5">
+    <div className="min-vh-100  py-5">
       <div className="container">
         <div className="row mb-4">
           <div className="col">
