@@ -13,7 +13,7 @@ function Home() {
 
   useEffect(() => {
     if (products.length > 0) {
-      setProductosDestacados(products.slice(2, 6));
+      setProductosDestacados(products.slice(2, 10));
     }
   }, [products]);
 
