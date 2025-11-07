@@ -23,7 +23,9 @@ function Home() {
         className="min-vh-100 "
         style={{
           background:
-            "linear-gradient(to bottom, #829ab1, #b6c7daff, #d9e4f0ff, #ffffffff, #ffffffff)",
+            "linear-gradient(to bottom, #FFE600, #b6c7daff, #d9e4f0ff, #ffffffff)",
+
+          borderTop: "1px solid #e4cd00ff",
         }}
       >
         <div className=" py-md-5">
@@ -35,7 +37,7 @@ function Home() {
               >
                 Bienvenido a Mi Tienda
               </h1>
-              <p className="fs-4 mb-4 opacity-75">
+              <p className="fs-4 mb-5 opacity-75">
                 Descubre los mejores productos con la mejor calidad y precio
               </p>
               <Link
@@ -59,7 +61,7 @@ function Home() {
                 <p className="text-muted fs-6 fs-md-5 px-3">
                   Los mejores productos seleccionados para ti
                 </p>
-                <hr className="border border-warning border-2 opacity-75 w-25 mx-auto mt-3" />
+                <hr className="border border-primary border-2 opacity-75 w-25 mx-auto mt-3" />
               </div>
 
               <div className="row g-3 g-md-4">
@@ -120,7 +122,7 @@ function Home() {
           </div>
         )}
 
-        <div className="container bg-white pt-5 pb-4 pb-md-5 px-3 px-md-4">
+        <div className="container  pt-5 pb-4 pb-md-5 px-3 px-md-4">
           <div className="text-center mb-4 mb-md-5">
             <h2 className="fw-bold text-black fs-3 fs-md-2">
               Por qué elegirnos
@@ -175,7 +177,7 @@ function Home() {
               <div
                 className="card h-100 border-0 shadow-sm text-center"
                 style={{
-                  background: "linear-gradient(135deg, #FFE600, #ffd900ff)",
+                  background: "linear-gradient(135deg, #FFE600, #ffc400ff)",
                 }}
               >
                 <div className="card-body p-3 p-md-4">

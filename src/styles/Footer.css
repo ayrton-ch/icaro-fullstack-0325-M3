@@ -3,7 +3,7 @@
 }
 
 .footer {
-  background: #859cb3;
+  background: #e7e9ec;
   color: #222;
   padding: 40px 16px 24px;
   font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto,
@@ -36,7 +36,7 @@
 .footer-section p {
   margin: 0 0 8px 0;
   font-size: 0.95rem;
-  color: #ffffff;
+  color: #4b4b4b;
   line-height: 1.6;
 }
 
@@ -57,7 +57,7 @@
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
-  color: #e8eaec;
+  color: #8a9fb4;
   background: transparent;
   border: 1px solid transparent;
   transition: transform 160ms ease, box-shadow 160ms ease,
@@ -104,7 +104,7 @@
   }
 
   .footer-section p {
-    color: #444;
+    color: #444444;
   }
 }
 
