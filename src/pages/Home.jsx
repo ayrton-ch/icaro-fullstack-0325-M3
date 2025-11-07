@@ -42,8 +42,8 @@ function Home() {
               </p>
               <Link
                 to="/productos"
-                className="btn-productos btn-lg px-5 py-3 rounded-pill fw-semibold"
-                style={{ boxShadow: "0 8px 15px rgba(255, 253, 107, 0.4)" }}
+                className="btn btn-primary btn-lg px-5 py-3 rounded-pill fw-semibold"
+                style={{ boxShadow: "0 8px 15px rgba(107, 220, 255, 0.4)" }}
               >
                 Ver Productos
               </Link>
