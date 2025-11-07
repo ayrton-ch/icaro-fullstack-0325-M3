@@ -27,8 +27,8 @@ function Navbar() {
             />
           </a>
           <div className="d-flex align-items-center ms-auto order-lg-last">
-            <button
-              type="button"
+            <Link
+              to="/cart"
               className="btn btn-link p-0 d-flex align-items-center position-relative me-3"
               title="Carrito"
               aria-label="Carrito"
@@ -56,7 +56,7 @@ function Navbar() {
                   {cartItemsCount}
                 </span>
               )}
-            </button>
+            </Link>
           </div>
           <button
             className="navbar-toggler border-0 p-2"
