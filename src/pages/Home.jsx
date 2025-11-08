@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png";
 import useProducts from "../hooks/useProducts";
 import "../styles/Home.css";
 import ProductCard from "../components/ProductCard/ProductCard";
@@ -14,14 +13,14 @@ function Home() {
 
   useEffect(() => {
     if (products.length > 0) {
-      setProductosDestacados(products.slice(2, 10));
+      setProductosDestacados(products.slice(2, 7));
     }
   }, [products]);
 
   return (
     <>
       <div
-        className="min-vh-100 "
+        className="min-vh-100"
         style={{
           background: "linear-gradient(to bottom,  #d9e4f0ff, #ffffffff)",
 
@@ -29,8 +28,8 @@ function Home() {
         }}
       >
         <div className=" py-md-5">
-          <div className="row justify-content-center ">
-            <div className="col-lg-8 col-md-10 col-sm-12   py-5">
+          <div className="row justify-content-center alig</div>n-items-center text-center  mx-0 px-3 px-md-4">
+            <div className="col-lg-8 col-md-10 col-sm-12 py-5">
               <h1
                 className="display-3 fw-bold mb-4"
                 style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.3)" }}
@@ -52,7 +51,7 @@ function Home() {
         </div>
 
         {productosDestacados.length > 0 && (
-          <div className="  py-md-5">
+          <div className="py-md-5">
             <div className="container">
               <div className="text-center mb-4 mb-md-5">
                 <h2 className="fw-bold  mb-2 fs-3 fs-md-2">
@@ -64,12 +63,14 @@ function Home() {
                 <hr className="border border-primary border-2 opacity-75 w-25 mx-auto mt-3" />
               </div>
 
-              <div className="row g-3 g-md-4">
-                {productosDestacados.map((producto) => (
-                  <div key={producto.id} className="col-12 col-sm-6 col-lg-3">
-                    <ProductCard key={producto.id} product={producto} />
-                  </div>
-                ))}
+              <div className="px-2 px-md-4 pb-4 ">
+                <div className="grid-custom">
+                  {productosDestacados.map((producto) => (
+                    <div key={producto.id}>
+                      <ProductCard product={producto} />
+                    </div>
+                  ))}
+                </div>
               </div>
 
               <div className="text-center mt-4 mt-md-5">

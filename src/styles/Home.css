@@ -1,3 +1,16 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.grid-custom {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.5rem;
+  align-items: center;
+}
+
 .btn-productos {
   width: 100%;
   background: #ffe600;
@@ -14,4 +27,11 @@
 
 .btn-productos:hover {
   background: #e0cd1a;
+}
+
+@media (min-width: 768px) {
+  .grid-custom {
+    gap: 1rem;
+    justify-items: center;
+  }
 }
