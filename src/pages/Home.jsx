@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import useProducts from "../hooks/useProducts";
 import "../styles/Home.css";
+import ProductCard from "../components/ProductCard/ProductCard";
 function Home() {
   const { products, loadProducts } = useProducts();
   const [productosDestacados, setProductosDestacados] = useState([]);
@@ -66,45 +67,7 @@ function Home() {
               <div className="row g-3 g-md-4">
                 {productosDestacados.map((producto) => (
                   <div key={producto.id} className="col-12 col-sm-6 col-lg-3">
-                    <div className="card h-100 border-0 shadow-sm">
-                      <div
-                        className="card-img-top bg-light p-3"
-                        style={{ height: "200px" }}
-                      >
-                        <img
-                          src={producto.image}
-                          className="img-fluid h-100 w-100"
-                          style={{ objectFit: "contain" }}
-                          alt={producto.title}
-                        />
-                      </div>
-                      <div className="card-body d-flex flex-column">
-                        <div className="mb-2">
-                          <span className="badge bg-primary text-uppercase small">
-                            {producto.category}
-                          </span>
-                        </div>
-                        <h5 className="card-title fw-bold text-dark mb-2">
-                          {producto.title.length > 50
-                            ? `${producto.title.substring(0, 50)}...`
-                            : producto.title}
-                        </h5>
-                        <hr className="border border-light border-1 opacity-50 my-2" />
-                        <p className="card-text text-muted small flex-grow-1">
-                          {producto.description.length > 80
-                            ? `${producto.description.substring(0, 80)}...`
-                            : producto.description}
-                        </p>
-                        <div className="mt-auto">
-                          <Link
-                            to="/productos"
-                            className="btn btn-primary w-100"
-                          >
-                            Ver Producto
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
+                    <ProductCard key={producto.id} product={producto} />
                   </div>
                 ))}
               </div>
