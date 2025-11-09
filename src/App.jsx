@@ -7,21 +7,24 @@ import Cart from "./pages/Cart/Cart";
 import Footer from "./components/Footer.jsx";
 import ProductDetail from "./pages/ProductDetail/ProductDetail.jsx";
 import Contact from "./pages/Contact.jsx";
+import { AlertProvider } from "./context/AlertContext"; // 👈 AGREGAR ESTA LÍNEA
 
 function App() {
   return (
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/productos" element={<Products />} />
-        <Route path="/productos/:id" element={<ProductDetail />} />
-        <Route path="/nosotros" element={<About />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/contacto" element={<Contact />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <AlertProvider>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/productos" element={<Products />} />
+          <Route path="/productos/:id" element={<ProductDetail />} />
+          <Route path="/nosotros" element={<About />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/contacto" element={<Contact />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </AlertProvider>
   );
 }
 
