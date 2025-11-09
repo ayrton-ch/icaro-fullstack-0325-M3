@@ -23,26 +23,41 @@ function Home() {
         className="min-vh-100 "
         style={{
           background:
-            "linear-gradient(to bottom, #ffec3eff, #b6c7daff, #d9e4f0ff, #ffffffff)",
+            "linear-gradient(to bottom, #ffec3eff, #b6c7daff, #b6c7daff, #b6c7daff, #d9e4f0ff, #ffffffff, #ffffffff, #ffffffff)",
 
           borderTop: "1px solid #e4cd00ff",
         }}
       >
-        <div className=" py-md-5">
-          <div className="row justify-content-center ">
-            <div className="col-lg-8 col-md-10 col-sm-12   py-5">
+        <div className="container py-3 py-md-5">
+          <div className="row justify-content-center align-items-center">
+            <div className="col-12 col-md-10 col-lg-8 text-center py-4 py-md-5">
+              <div className="mb-3 mb-md-4">
+                <img
+                  src={logo}
+                  alt="Logo Mi Tienda"
+                  className="img-fluid"
+                  style={{
+                    maxWidth: "150px",
+                    width: "100%",
+                    height: "auto",
+                  }}
+                />
+              </div>
+
               <h1
-                className="display-3 fw-bold mb-4"
+                className="display-4 display-md-3 fw-bold mb-3 mb-md-4 px-2"
                 style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.3)" }}
               >
                 Bienvenido a Mi Tienda
               </h1>
-              <p className="fs-4 mb-5 opacity-75">
+
+              <p className="fs-5 fs-md-4 mb-4 mb-md-5 opacity-75 px-3">
                 Descubre los mejores productos con la mejor calidad y precio
               </p>
+
               <Link
                 to="/productos"
-                className="btn btn-primary btn-lg px-5 py-3 rounded-pill fw-semibold"
+                className="btn btn-primary btn-lg px-4 px-md-5 py-2 py-md-3 rounded-pill fw-semibold"
                 style={{ boxShadow: "0 8px 15px rgba(107, 220, 255, 0.4)" }}
               >
                 Ver Productos
