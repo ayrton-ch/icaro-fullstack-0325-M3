@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import useProducts from "../hooks/useProducts";
 import "../styles/Home.css";
+import styles from "./Home.module.css";
 function Home() {
   const { products, loadProducts } = useProducts();
   const [productosDestacados, setProductosDestacados] = useState([]);
@@ -28,7 +29,7 @@ function Home() {
           borderTop: "1px solid #e4cd00ff",
         }}
       >
-        <div className="container py-3 py-md-5">
+        <div className={styles.container}>
           <div className="row justify-content-center align-items-center">
             <div className="col-12 col-md-10 col-lg-8 text-center py-4 py-md-5">
               <div className="mb-3 mb-md-4">
