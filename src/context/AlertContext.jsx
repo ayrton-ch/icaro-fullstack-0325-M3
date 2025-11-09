@@ -25,8 +25,8 @@ export const AlertProvider = ({ children }) => {
       {children}
       {alert && (
         <div
-          className={`alert alert-${alert.type} position-fixed top-0 start-50 translate-middle-x mt-3 shadow-lg`}
-          style={{ zIndex: 9999, minWidth: "300px" }}
+          className={`alert alert-${alert.type} position-fixed top-0 start-50 translate-middle-x mt-3 shadow-lg rounded-4`}
+          style={{ zIndex: 9999, minWidth: "200px" }}
           role="alert"
         >
           <div className="d-flex align-items-center">

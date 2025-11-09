@@ -144,6 +144,13 @@ const Cart = () => {
                   <button
                     className="btn btn-lg"
                     style={{ backgroundColor: "#FFE600" }}
+                    onClick={() => {
+                      showAlert("Procesando pago...", "info");
+
+                      setTimeout(() => {
+                        showAlert("Pago realizado con éxito", "success");
+                      }, 2000);
+                    }}
                   >
                     Proceder al Pago
                   </button>

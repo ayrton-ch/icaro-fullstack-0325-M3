@@ -7,7 +7,7 @@ import Cart from "./pages/Cart/Cart";
 import Footer from "./components/Footer.jsx";
 import ProductDetail from "./pages/ProductDetail/ProductDetail.jsx";
 import Contact from "./pages/Contact.jsx";
-import { AlertProvider } from "./context/AlertContext"; // 👈 AGREGAR ESTA LÍNEA
+import { AlertProvider } from "./context/AlertContext";
 
 function App() {
   return (
