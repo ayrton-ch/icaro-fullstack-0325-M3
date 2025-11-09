@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo_dos.png";
 import useProducts from "../hooks/useProducts";
 import "../styles/Home.css";
 import styles from "./Home.module.css";
@@ -38,7 +38,7 @@ function Home() {
                   alt="Logo Mi Tienda"
                   className="img-fluid"
                   style={{
-                    maxWidth: "150px",
+                    maxWidth: "80px",
                     width: "100%",
                     height: "auto",
                   }}

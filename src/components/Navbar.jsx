@@ -21,8 +21,8 @@ function Navbar() {
             <img
               src={logo}
               alt="Logo"
-              width="60"
-              height="48"
+              width="80"
+              height="35"
               className="d-inline-block align-text-top"
             />
           </a>
