@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import useProducts from "../../hooks/useProducts";
 import useProductStore from "../../store/productStore";
+import { useAlert } from "../../context/AlertContext";
 
 function ProductDetail() {
+  const { showAlert } = useAlert();
   const { id } = useParams();
   const navigate = useNavigate();
   const { products, loadProducts } = useProducts();
@@ -127,7 +129,10 @@ function ProductDetail() {
               <div className="d-grid gap-3 mb-4">
                 <button
                   className="btn btn-primary btn-lg fw-semibold shadow-sm"
-                  onClick={handleAddToCart}
+                  onClick={() => {
+                    handleAddToCart();
+                    showAlert("Producto agregado al carrito", "success");
+                  }}
                 >
                   Agregar al Carrito
                 </button>
