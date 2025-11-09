@@ -1,16 +1,27 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import useProductStore from "../../store/productStore";
 import styles from "./ProductCard.module.css";
 
 const ProductCard = ({ product }) => {
+  const navigate = useNavigate();
   const addToCart = useProductStore((state) => state.addToCart);
 
-  const handleAddToCart = () => {
+  const handleAddToCart = (e) => {
+    e.stopPropagation();
     addToCart(product);
   };
 
+  const handleCardClick = () => {
+    navigate(`/productos/${product.id}`);
+  };
+
   return (
-    <div className={styles.card}>
+    <div
+      className={styles.card}
+      onClick={handleCardClick}
+      style={{ cursor: "pointer" }}
+    >
       <div className={styles.imageContainer}>
         <img src={product.image} alt={product.title} className={styles.image} />
       </div>
