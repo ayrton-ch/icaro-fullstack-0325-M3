@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import logo from "../assets/logo_dos.png";
+import { useAlert } from "../context/AlertContext";
 
 function Contact() {
+  const { showAlert } = useAlert();
   const [formData, setFormData] = useState({
     nombre: "",
     email: "",
@@ -17,7 +19,7 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    showAlert("Mensaje enviado correctamente", "success");
     setFormData({
       nombre: "",
       email: "",
