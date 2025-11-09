@@ -11,6 +11,7 @@ const ProductCard = ({ product }) => {
   const handleAddToCart = (e) => {
     e.stopPropagation();
     addToCart(product);
+    showAlert("Producto agregado al carrito", "success");
   };
 
   const handleCardClick = () => {
@@ -32,13 +33,7 @@ const ProductCard = ({ product }) => {
         <p className={styles.category}>{product.category}</p>
         <p className={styles.price}>${product.price}</p>
 
-        <button
-          className={styles.addButton}
-          onClick={() => {
-            handleAddToCart();
-            showAlert("Producto agregado al carrito", "success");
-          }}
-        >
+        <button className={styles.addButton} onClick={handleAddToCart}>
           Agregar al Carrito
         </button>
       </div>

@@ -117,15 +117,6 @@ function ProductDetail() {
 
               <hr />
 
-              <div className="mb-4">
-                <small className="text-muted mt-2 d-block">
-                  Total:{" "}
-                  <strong className="text-primary">
-                    ${product.price.toFixed(2)}
-                  </strong>
-                </small>
-              </div>
-
               <div className="d-grid gap-3 mb-4">
                 <button
                   className="btn btn-primary btn-lg fw-semibold shadow-sm"
