@@ -2,8 +2,9 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import useProductStore from "../../store/productStore";
 import styles from "./ProductCard.module.css";
-
+import { useAlert } from "../../context/AlertContext";
 const ProductCard = ({ product }) => {
+  const { showAlert } = useAlert();
   const navigate = useNavigate();
   const addToCart = useProductStore((state) => state.addToCart);
 
@@ -31,7 +32,13 @@ const ProductCard = ({ product }) => {
         <p className={styles.category}>{product.category}</p>
         <p className={styles.price}>${product.price}</p>
 
-        <button className={styles.addButton} onClick={handleAddToCart}>
+        <button
+          className={styles.addButton}
+          onClick={() => {
+            handleAddToCart();
+            showAlert("Producto agregado al carrito", "success");
+          }}
+        >
           Agregar al Carrito
         </button>
       </div>
