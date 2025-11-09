@@ -2,8 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import useProductStore from "../../store/productStore";
 import "../../styles/Cart.css";
-
+import { useAlert } from "../../context/AlertContext";
 const Cart = () => {
+  const { showAlert } = useAlert();
+
   const cart = useProductStore((state) => state.cart);
   const removeFromCart = useProductStore((state) => state.removeFromCart);
   const clearCart = useProductStore((state) => state.clearCart);
@@ -91,7 +93,13 @@ const Cart = () => {
                       <div className="col-3 col-md-3 text-end">
                         <button
                           className="btn btn-outline-danger btn-sm"
-                          onClick={() => removeFromCart(item.id)}
+                          onClick={() => {
+                            removeFromCart(item.id);
+                            showAlert(
+                              "Producto eliminado del carrito",
+                              "danger"
+                            );
+                          }}
                           title="Eliminar producto"
                         >
                           Eliminar
@@ -141,7 +149,10 @@ const Cart = () => {
                   </button>
                   <button
                     className="btn btn-outline-secondary"
-                    onClick={clearCart}
+                    onClick={() => {
+                      clearCart();
+                      showAlert("Carrito vaciado", "warning");
+                    }}
                   >
                     Vaciar Carrito
                   </button>
